@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
-const Logo = require('../../../static/icons/mh-logo.png');
+const Logo = require('../../../static/icons/logo-title.png');
 import { devices } from '../../styles';
 
 const Wrapper = styled.div`

@@ -128,8 +128,8 @@ let buildConfig = {
             minimize: true
         }),
         new CopyWebpackPlugin([
-            { from: './static/icons/x-logo.png', to: './logo.png' },
-            { from: './static/icons/x-logo-title.png', to: './logo-title.png' },
+            { from: './static/icons/logo-h.png', to: './logo.png' },
+            { from: './static/icons/logo-title.png', to: './logo-title.png' },
             {context: './app/favicon/', from: '**/*', to: './favicon/'},
             {context: './app/fonts/', from: '**/*', to: './fonts/'}
         ]),

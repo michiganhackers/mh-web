@@ -9,8 +9,8 @@ import { devices } from '../styles';
 import theme from '../styles/theme.js';
 import { getUserMetadata } from '../util/user.js';
 
-const HeaderLogoImage = require('../../static/icons/logo_h.png');
-const Favicon = require('../../static/icons/logo_square.jpg');
+const HeaderLogoImage = require('../../static/icons/logo-h.png');
+const Favicon = require('../../static/icons/logo-square.jpg');
 
 /* Header Section */
 const Wrapper = styled.div`
