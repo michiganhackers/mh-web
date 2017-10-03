@@ -9,8 +9,8 @@ import { devices } from '../styles';
 import theme from '../styles/theme.js';
 import { getUserMetadata } from '../util/user.js';
 
-const HeaderLogoImage = require('../../static/icons/x-logo.png');
-const Favicon = require('../../static/icons/x-logo.png');
+const HeaderLogoImage = require('../../static/icons/logo_h.png');
+const Favicon = require('../../static/icons/logo_square.jpg');
 
 /* Header Section */
 const Wrapper = styled.div`
@@ -45,6 +45,7 @@ const FlexWrapper = styled.div`
 const Logo = styled.img`
     height: 50px;
     display: block;
+    paddingBottom: 5px;
 
     ${devices.small`
         height: 50px;
@@ -277,7 +278,7 @@ class Header extends React.Component {
                 {window.location.pathname == routes.SUBSCRIBE ? null : (
                     <div>
                         <Helmet>
-                            <title>MHacks X</title>
+                            <title>Michigan Hackers</title>
 
                             <link
                                 rel="icon"
