@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { PageContainer, FullScreenAnimation } from '../../components';
+import { PageContainer } from '../../components';
 
 import Landing from './landing.jsx';
 import Faq from './faq.jsx';
@@ -16,7 +16,6 @@ class HomePage extends React.Component {
     render() {
         return (
             <StyledPageContainer ref="pagecontainer">
-                <FullScreenAnimation />
                 <Landing />
                 <Welcome />
                 <HackingCategories />
