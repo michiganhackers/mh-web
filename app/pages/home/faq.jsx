@@ -70,19 +70,11 @@ class Faq extends React.Component {
                                 <Section>
                                     <FaqItem
                                         header="Are we MHacks?"
-                                        body={
-                                            <span>
-                                                No
-                                            </span>
-                                        }
+                                        body={<span>No</span>}
                                     />
                                     <FaqItem
                                         header="Are we hacking the NSA?"
-                                        body={
-                                            <span>
-                                                No ;)
-                                            </span>
-                                        }
+                                        body={<span>No ;)</span>}
                                     />
                                     <FaqItem
                                         header="What happens at a hackathon?"
