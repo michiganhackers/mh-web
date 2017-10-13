@@ -6,8 +6,7 @@ import { SectionHeader } from './section_components.jsx';
 import { devices } from '../../styles';
 
 const Wrapper = styled.div`
-    background: ${props => props.theme.gradientOverlay}, ${props =>
-    props.theme.primary}
+    background: ${props => props.theme.secondary}
     padding: 80px 0;
 `;
 
@@ -69,6 +68,22 @@ class Faq extends React.Component {
                             <FaqBody>
                                 <FaqSectionHeader>General</FaqSectionHeader>
                                 <Section>
+                                    <FaqItem
+                                        header="Are we MHacks?"
+                                        body={
+                                            <span>
+                                                No
+                                            </span>
+                                        }
+                                    />
+                                    <FaqItem
+                                        header="Are we hacking the NSA?"
+                                        body={
+                                            <span>
+                                                No ;)
+                                            </span>
+                                        }
+                                    />
                                     <FaqItem
                                         header="What happens at a hackathon?"
                                         body={
