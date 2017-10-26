@@ -90,7 +90,7 @@ class Faq extends React.Component {
                                         }
                                     />
                                     <FaqItem
-                                        header="What do people normally make?"
+                                        header="WHat Do PeoPlE NorMaLLy mAke?"
                                         body={
                                             <span>
                                                 Hacks generally fall under one
