@@ -131,9 +131,8 @@ class Faq extends React.Component {
                                 <FaqSectionHeader>Application</FaqSectionHeader>
                                 <Section>
                                     <FaqItem
-                                        header="How do I apply?"
-                                        body="Step one is to create an MHacks Account and fill out some basic information in your MHacks Profile. Once that's done,
-                                     you'll be able to apply for MHacks X! Note that if you're accepted to MHacks X, you will need to Confirm your acceptance."
+                                        header="How do I join?"
+                                        body="Come by one of our Hacknights to find out more!"
                                     />
                                     <FaqItem
                                         header="When are applications closing?"
