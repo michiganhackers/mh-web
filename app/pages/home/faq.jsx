@@ -77,22 +77,10 @@ class Faq extends React.Component {
                                         body={<span>No ;)</span>}
                                     />
                                     <FaqItem
-                                        header="What happens at a hackathon?"
+                                        header="What happens at Hack Nights?"
                                         body={
                                             <span>
-                                                Participants
-                                                (&#8220;hackers&#8221;) spend 36
-                                                hours working in teams of 1 - 4
-                                                people to build or code or
-                                                design projects
-                                                (&#8220;hacks&#8221;) that
-                                                they&#8217;re excited about.
-                                                There are workshops, mentors,
-                                                food, swag, and buckets of
-                                                coffee to guide you along the
-                                                way. You bring your ideas, and
-                                                we give you everything you need
-                                                to make them come to life.
+                                                Students get together once a week and work on whatever they want.  You can build websites, apps, etc.
                                             </span>
                                         }
                                     />
@@ -121,7 +109,7 @@ class Faq extends React.Component {
                                      get started. We will also dedicate one room to new hackers and have several project ideas to help you get started."
                                     />
                                     <FaqItem
-                                        header="Who runs MHacks?"
+                                        header="Who runs Michigan Hackers?"
                                         body="MHacks is run by a group of dedicated and passionate young people,
                                         most of whom are students at the University of Michigan."
                                     />
