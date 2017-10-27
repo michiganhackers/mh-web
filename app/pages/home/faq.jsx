@@ -259,7 +259,7 @@ class Faq extends React.Component {
                                                     hackathon@umich.edu
                                                 </Link>. If your company is
                                                 interested in becoming a
-                                                sponsor, check out the
+                                                sponsor check out the
                                                 sponsorship section below.
                                             </span>
                                         }
