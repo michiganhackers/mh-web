@@ -74,7 +74,7 @@ class Faq extends React.Component {
                                         body={
                                             <span>
                                                 Everyone gets super drunk, Waka
-                                                Flocka makes an appearance and 
+                                                Flocka makes an appearance and
                                                 it is soo hypeee
                                             </span>
                                         }
