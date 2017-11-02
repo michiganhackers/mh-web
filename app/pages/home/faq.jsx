@@ -73,7 +73,7 @@ class Faq extends React.Component {
                                         header="What happens at a hackathon?"
                                         body={
                                             <span>
-                                                Participants 
+                                                Participants
                                                 (&#8220;hackers&#8221;) spend 36
                                                 hours working in teams of 1 - 4
                                                 people to build or code or
