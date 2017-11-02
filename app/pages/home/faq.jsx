@@ -80,19 +80,9 @@ class Faq extends React.Component {
                                         header="What happens at a hackathon?"
                                         body={
                                             <span>
-                                                Participant
-                                                (&#8220;hackers&#8221;) spend 36
-                                                hours working in teams of 1 - 4
-                                                people to build or code or
-                                                design projects
-                                                (&#8220;hacks&#8221;) that
-                                                they&#8217;re excited about.
-                                                There are workshops, mentors,
-                                                food, swag, and buckets of
-                                                coffee to guide you along the
-                                                way. You bring your ideas, and
-                                                we give you everything you need
-                                                to make them come to life.
+                                                Everyone gets super drunk, Waka
+                                                Flocka makes an appearance and
+                                                it is soo hypeeee
                                             </span>
                                         }
                                     />
@@ -258,9 +248,9 @@ class Faq extends React.Component {
                                                 <Link href="mailto:hackathon@umich.edu">
                                                     hackathon@umich.edu
                                                 </Link>. If your company is
-                                                interested in becoming a
-                                                sponsor, check out the
-                                                sponsorship section below.
+                                                interested in becoming a sponsor
+                                                check out the sponsorship
+                                                section below.
                                             </span>
                                         }
                                     />
