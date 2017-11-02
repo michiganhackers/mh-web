@@ -87,7 +87,7 @@ class Faq extends React.Component {
                                         }
                                     />
                                     <FaqItem
-                                        header="What do people normally make?"
+                                        header="WHat Do PeoPlE NorMaLLy mAke?"
                                         body={
                                             <span>
                                                 Hacks generally fall under one
@@ -106,7 +106,7 @@ class Faq extends React.Component {
                                         }
                                     />
                                     <FaqItem
-                                        header="Do I have to know how to code to attend?"
+                                        header="Do    I have to know how to code to attend?"
                                         body="Nope! We&#8217;ll have lots of resources including workshops and a sweet mentorship system to help beginners
                                      get started. We will also dedicate one room to new hackers and have several project ideas to help you get started."
                                     />
