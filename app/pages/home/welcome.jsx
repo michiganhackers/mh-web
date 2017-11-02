@@ -22,7 +22,7 @@ class Welcome extends React.Component {
                     <SectionHeader>
                         Welcome to<br /> Michigan Hackers
                     </SectionHeader>
-                    <SectionBody>Get learnt</SectionBody>
+                    <SectionBody>Get learnt and turnt</SectionBody>
                 </CenteredContainer>
             </Wrapper>
         );
