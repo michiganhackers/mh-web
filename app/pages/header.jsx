@@ -150,26 +150,14 @@ const Burger = styled.div`
 
 class HeaderLinks extends React.Component {
     render() {
-        const {
-            color,
-            userMetadata,
-            isCompact
-        } = this.props;
-        const {
-            isLoggedIn,
-            isAdmin,
-            isSponsor
-        } = userMetadata;
+        const { color, userMetadata, isCompact } = this.props;
+        const { isLoggedIn, isAdmin, isSponsor } = userMetadata;
 
         // Either render a Menu component for mobile, or NavContainer for desktop as
         // the parent component for the navigation links.
         const WrappingComponent = isCompact ? Menu : NavContainer;
         return (
-            <WrappingComponent
-                right
-                disableCompact={true}
-                isOpen={false}
-            >
+            <WrappingComponent right disableCompact={true} isOpen={false}>
                 <StyledALink href={routes.HOME + '#about'} color={color}>
                     About
                 </StyledALink>
