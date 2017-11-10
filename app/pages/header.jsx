@@ -9,7 +9,7 @@ import { devices } from '../styles';
 import theme from '../styles/theme.js';
 import { getUserMetadata } from '../util/user.js';
 
-const HeaderLogoImage = require('../../static/icons/logo-h.png');
+const HeaderLogoImage = require('../../static/icons/mh-logo.png');
 const Favicon = require('../../static/icons/logo-square.jpg');
 
 /* Header Section */
@@ -67,48 +67,30 @@ const HeaderNavLink = styled(NavLink)`
 `;
 
 const StyledNavLink = styled(NavLink)`
-    fontSize: 16px;
+    fontSize: 22px;
     padding: 2px 20px;
-    margin: 10px 0 10px 15px;
-    border: 2px solid ${props => props.color};
+    //margin: 10px 0 10px 15px;
     color: ${props => props.color};
-    backgroundColor: ${theme.primary};
-    borderRadius: 25px;
     textDecoration: none;
     transition: all 0.3s;
     text-transform: uppercase;
 
     &:hover {
-        backgroundColor: ${props => props.color};
-        color: white;
-    }
-
-    &:first-child {
-        margin: 0;
-        marginLeft: 15px;
+        textDecoration: underline;
     }
 `;
 
 const StyledALink = styled.a`
-    fontSize: 16px;
+    fontSize: 22px;
     padding: 2px 20px;
-    margin: 10px 0 10px 15px;
-    border: 2px solid ${props => props.color};
+    //margin: 10px 0 10px 15px;
     color: ${props => props.color};
-    backgroundColor: ${theme.primary};
-    borderRadius: 25px;
     textDecoration: none;
     transition: all 0.3s;
     text-transform: uppercase;
 
     &:hover {
-        backgroundColor: ${props => props.color};
-        color: white;
-    }
-
-    &:first-child {
-        margin: 0;
-        marginLeft: 15px;
+        textDecoration: underline;
     }
 `;
 
@@ -171,22 +153,13 @@ class HeaderLinks extends React.Component {
         const {
             color,
             userMetadata,
-            isCompact,
-            configurationData
+            isCompact
         } = this.props;
         const {
             isLoggedIn,
-            isAccepted,
-            isConfirmed,
             isAdmin,
-            isSponsor,
-            isReader,
-            isEmailVerified
+            isSponsor
         } = userMetadata;
-        const {
-            is_live_page_enabled,
-            is_team_building_enabled
-        } = configurationData;
 
         // Either render a Menu component for mobile, or NavContainer for desktop as
         // the parent component for the navigation links.
@@ -194,9 +167,21 @@ class HeaderLinks extends React.Component {
         return (
             <WrappingComponent
                 right
-                disableCompact={!userMetadata.isLoggedIn}
+                disableCompact={true}
                 isOpen={false}
             >
+                <StyledALink href={routes.HOME + '#about'} color={color}>
+                    About
+                </StyledALink>
+                <StyledALink href={routes.HOME + '#email-list'} color={color}>
+                    Email List
+                </StyledALink>
+                <StyledALink href={routes.HOME + '#events'} color={color}>
+                    Events
+                </StyledALink>
+                <StyledALink href={routes.HOME + '#sponsors'} color={color}>
+                    Sponsors
+                </StyledALink>
                 {isLoggedIn && isAdmin ? (
                     <StyledALink href={routes.ADMIN} color={color}>
                         Admin
@@ -206,52 +191,6 @@ class HeaderLinks extends React.Component {
                     <StyledALink href={routes.SPONSOR_READER} color={color}>
                         Sponsor
                     </StyledALink>
-                ) : null}
-                {isLoggedIn && (isReader || isAdmin) ? (
-                    <StyledALink href={routes.HACKER_READER} color={color}>
-                        Reader
-                    </StyledALink>
-                ) : null}
-                {!isLoggedIn || !isEmailVerified ? null : (
-                    <StyledNavLink to={routes.APPLY} color={color}>
-                        Hacker App
-                    </StyledNavLink>
-                )}
-                {isLoggedIn ? (
-                    <StyledNavLink to={routes.MENTOR_APPLICATION} color={color}>
-                        Mentor App
-                    </StyledNavLink>
-                ) : null}
-                {isLoggedIn ? (
-                    <StyledNavLink
-                        to={routes.SPEAKER_APPLICATION}
-                        color={color}
-                    >
-                        Speaker App
-                    </StyledNavLink>
-                ) : null}
-                {isLoggedIn ? (
-                    <StyledNavLink to={routes.PROFILE} color={color}>
-                        Edit Profile
-                    </StyledNavLink>
-                ) : null}
-                {isLoggedIn ? (
-                    <StyledNavLink to={routes.DASHBOARD} color={color}>
-                        Dashboard
-                    </StyledNavLink>
-                ) : null}
-                {isLoggedIn && is_live_page_enabled ? (
-                    <StyledNavLink to={routes.LIVE} color={color}>
-                        Live
-                    </StyledNavLink>
-                ) : null}
-                {isLoggedIn &&
-                isAccepted &&
-                isConfirmed &&
-                is_team_building_enabled ? (
-                    <StyledNavLink to={routes.TEAM_BUILDING} color={color}>
-                        Blueprinting
-                    </StyledNavLink>
                 ) : null}
                 {isLoggedIn ? (
                     <StyledNavLink to={routes.LOGOUT} color={color}>
@@ -294,12 +233,12 @@ class Header extends React.Component {
                                 <HeaderLinks
                                     userMetadata={userMetadata}
                                     configurationData={configurationData}
-                                    color={this.props.theme.highlight}
+                                    color={this.props.theme.secondary}
                                     isCompact={false}
                                 />
                                 <Burger
                                     primaryColor={this.props.theme.highlight}
-                                    disableCompact={!userMetadata.isLoggedIn}
+                                    disableCompact={true}
                                 >
                                     <HeaderLinks
                                         userMetadata={userMetadata}
