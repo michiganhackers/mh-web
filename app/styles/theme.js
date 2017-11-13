@@ -7,9 +7,9 @@ function generateBackgroundGradient(angle, alpha) {
 export default {
     // Color primitives
     primaryFont: 'Montserrat',
-    primary: '#e06638',
-    secondary: 'black',
-    highlight: 'white',
+    primary: '#f7f7f4',
+    secondary: '#ef4937',
+    highlight: 'black',
     highlightSecondary: '#ebcdd1',
     success: '#2ecc71',
     teal: '#1CA3A3',
