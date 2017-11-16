@@ -136,9 +136,7 @@ class Footer extends React.Component {
                                     <LegalLink href="">
                                         Michigan Hackers CoC
                                     </LegalLink>
-                                    <LegalLink href="">
-                                        Other CoC
-                                    </LegalLink>
+                                    <LegalLink href="">Other CoC</LegalLink>
                                 </LegalLinks>
                             </HomeFooter>
                         </Container>

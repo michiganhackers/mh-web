@@ -88,9 +88,7 @@ class AppProvider extends React.Component {
                                 path={routes.LOGIN}
                                 render={() => {
                                     if (this.getMetadata().isLoggedIn) {
-                                        return (
-                                            <Redirect to={routes.HOME} />
-                                        );
+                                        return <Redirect to={routes.HOME} />;
                                     }
 
                                     return <Login />;
@@ -274,9 +272,7 @@ class AppProvider extends React.Component {
                                     }
 
                                     if (isLoggedIn) {
-                                        return (
-                                            <Redirect to={routes.HOME} />
-                                        );
+                                        return <Redirect to={routes.HOME} />;
                                     }
 
                                     return <Redirect to={routes.LOGIN} />;
