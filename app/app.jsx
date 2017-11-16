@@ -22,7 +22,6 @@ import {
     BlackoutPage,
     Reader,
     Confirm,
-    MentorApply,
     SpeakerApply,
     AdminPage
 } from './pages';
@@ -116,17 +115,6 @@ class AppProvider extends React.Component {
                             />
                             <Route
                                 exact
-                                path={routes.MENTOR_APPLICATION}
-                                render={() => {
-                                    if (this.getMetadata().isLoggedIn) {
-                                        return <MentorApply />;
-                                    }
-
-                                    return <Redirect to={routes.LOGIN} />;
-                                }}
-                            />
-                            <Route
-                                exact
                                 path={routes.SPEAKER_APPLICATION}
                                 render={() => {
                                     if (this.getMetadata().isLoggedIn) {
@@ -202,22 +190,6 @@ class AppProvider extends React.Component {
                                     } = this.getMetadata();
                                     if (isLoggedIn && (isReader || isAdmin)) {
                                         return <Reader.Hacker />;
-                                    }
-
-                                    return <Redirect to={routes.LOGIN} />;
-                                }}
-                            />
-                            <Route
-                                exact
-                                path={routes.MENTOR_READER}
-                                render={() => {
-                                    const {
-                                        isLoggedIn,
-                                        isReader,
-                                        isAdmin
-                                    } = this.getMetadata();
-                                    if (isLoggedIn && (isReader || isAdmin)) {
-                                        return <Reader.Mentor />;
                                     }
 
                                     return <Redirect to={routes.LOGIN} />;

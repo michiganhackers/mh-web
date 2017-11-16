@@ -7,7 +7,6 @@ import Apply from './apply.jsx';
 import LivePage from './live';
 import Reader from './reader';
 import Confirm from './confirm';
-import MentorApply from './mentor/apply';
 import SpeakerApply from './speaker/apply';
 import AdminPage from './admin';
 
@@ -21,7 +20,6 @@ export {
     LivePage,
     Reader,
     Confirm,
-    MentorApply,
     SpeakerApply,
     AdminPage
 };
