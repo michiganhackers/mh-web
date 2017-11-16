@@ -24,9 +24,7 @@ import {
     Confirm,
     MentorApply,
     SpeakerApply,
-    Dashboard,
-    AdminPage,
-    TeamBuilding
+    AdminPage
 } from './pages';
 import { ConfigurationThunks } from './actions';
 import { connect } from 'react-redux';
@@ -63,8 +61,7 @@ class AppProvider extends React.Component {
     render() {
         const {
             should_logout,
-            is_live_page_enabled,
-            is_team_building_enabled
+            is_live_page_enabled
         } = this.props.configurationState.data;
 
         if (should_logout && localStorage.getItem('jwt')) {
@@ -92,7 +89,7 @@ class AppProvider extends React.Component {
                                 render={() => {
                                     if (this.getMetadata().isLoggedIn) {
                                         return (
-                                            <Redirect to={routes.DASHBOARD} />
+                                            <Redirect to={routes.HOME} />
                                         );
                                     }
 
@@ -147,17 +144,6 @@ class AppProvider extends React.Component {
                                 render={() => {
                                     if (this.getMetadata().isLoggedIn) {
                                         return <EditProfile />;
-                                    }
-
-                                    return <Redirect to={routes.LOGIN} />;
-                                }}
-                            />
-                            <Route
-                                exact
-                                path={routes.DASHBOARD}
-                                render={() => {
-                                    if (this.getMetadata().isLoggedIn) {
-                                        return <Dashboard />;
                                     }
 
                                     return <Redirect to={routes.LOGIN} />;
@@ -289,43 +275,13 @@ class AppProvider extends React.Component {
 
                                     if (isLoggedIn) {
                                         return (
-                                            <Redirect to={routes.DASHBOARD} />
+                                            <Redirect to={routes.HOME} />
                                         );
                                     }
 
                                     return <Redirect to={routes.LOGIN} />;
                                 }}
                             />
-                            {is_team_building_enabled ? (
-                                <Route
-                                    exact
-                                    path={routes.TEAM_BUILDING}
-                                    render={() => {
-                                        const {
-                                            isLoggedIn,
-                                            isAccepted,
-                                            isConfirmed
-                                        } = this.getMetadata();
-                                        if (
-                                            isLoggedIn &&
-                                            isAccepted &&
-                                            isConfirmed
-                                        ) {
-                                            return <TeamBuilding />;
-                                        }
-
-                                        if (isLoggedIn) {
-                                            return (
-                                                <Redirect
-                                                    to={routes.DASHBOARD}
-                                                />
-                                            );
-                                        }
-
-                                        return <Redirect to={routes.LOGIN} />;
-                                    }}
-                                />
-                            ) : null}
                             <Route
                                 exact
                                 path={routes.SUBSCRIBE}

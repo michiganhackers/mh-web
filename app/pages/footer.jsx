@@ -111,33 +111,33 @@ class Footer extends React.Component {
                     <FooterWrapper id="asdfFooter">
                         <Container>
                             <HomeFooter>
-                                <Text>© MHacks 2017</Text>
+                                <Text>© Michigan Hackers 2017</Text>
                                 <Flexer>
                                     <ImgButton
                                         src={FacebookImg}
                                         alt="Facebook"
                                         align="middle"
-                                        href="https://www.facebook.com/MHacksHackathon"
+                                        href="https://www.facebook.com/michiganhackers/"
                                     />
                                     <ImgButton
                                         src={InstagramImg}
                                         alt="Instagram"
                                         align="middle"
-                                        href="https://www.instagram.com/mhacks_"
+                                        href="https://www.instagram.com/michiganhackers/"
                                     />
                                     <ImgButton
                                         src={TwitterImg}
                                         alt="Twitter"
                                         align="middle"
-                                        href="https://twitter.com/mhacks"
+                                        href="https://twitter.com/michiganhackers"
                                     />
                                 </Flexer>
                                 <LegalLinks>
-                                    <LegalLink href="https://docs.google.com/document/d/1L9wC7lfXmOBCKdUQancuoYQf86KIQqUJ0is4dr8QqQM/pub">
-                                        MHacks CoC
+                                    <LegalLink href="">
+                                        Michigan Hackers CoC
                                     </LegalLink>
-                                    <LegalLink href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">
-                                        MLH CoC
+                                    <LegalLink href="">
+                                        Other CoC
                                     </LegalLink>
                                 </LegalLinks>
                             </HomeFooter>

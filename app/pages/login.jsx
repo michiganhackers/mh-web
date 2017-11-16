@@ -127,7 +127,7 @@ class Login extends React.Component {
                                 onClick: this.tabSelect
                             }
                         ]}
-                        primaryColor={this.props.theme.primary}
+                        primaryColor={this.props.theme.secondary}
                     />
                     {this.props.userState.error ? (
                         <AlertContainer>
@@ -175,7 +175,7 @@ class Login extends React.Component {
                             <ButtonGroup>
                                 <RoundedButton
                                     type="submit"
-                                    color={this.props.theme.primary}
+                                    color={this.props.theme.secondary}
                                 >
                                     Confirm
                                 </RoundedButton>

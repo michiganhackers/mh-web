@@ -55,7 +55,7 @@ const Link = styled.a`color: ${theme.secondary};`;
 class Sponsorship extends React.Component {
     render() {
         return (
-            <Wrapper>
+            <Wrapper id="sponsors">
                 <CenteredContainer>
                     <Brick />
                     <SectionHeader>Sponsorship</SectionHeader>
