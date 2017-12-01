@@ -19,8 +19,8 @@ class HomePage extends React.Component {
                 <Landing />
                 <Welcome />
                 <Faq />
-                <EmailList />
                 <Sponsorship />
+                <EmailList />
             </StyledPageContainer>
         );
     }
