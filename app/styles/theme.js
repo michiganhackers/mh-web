@@ -6,7 +6,7 @@ function generateBackgroundGradient(angle, alpha) {
 // example use
 export default {
     // Color primitives
-    primaryFont: 'Montserrat',
+    primaryFont: 'Gotham',
     primary: '#f7f7f4',
     secondary: '#ef4937',
     highlight: 'black',
