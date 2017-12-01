@@ -22,22 +22,41 @@ const CenteredContainer = styled.div`
 `;
 
 const SectionHeader = styled.h2`
-    fontSize: 42px;
-    color: ${props => props.theme.highlight};
-    textTransform: uppercase;
-    text-align: center;
-    fontWeight: 500;
-    textAlign: center;
-
-    ${devices.small`
     fontSize: 48px;
+    letterSpacing: 5px;
+    color: ${props => props.theme.secondary};
+    textTransform: uppercase;
+    fontWeight: bold;
+    textAlign: left;
+
+    ${devices.tablet`
+    fontSize: 72px;
+    letterSpacing: 10px;
     `};
 `;
 
+const SectionSubheader = styled.h3`
+    fontSize: 24px;
+    letterSpacing: 2px;
+    color: ${props => props.theme.secondary};
+    fontWeight: book;
+    textAlign: left;
+
+    ${devices.tablet`
+    fontSize: 36px;
+    letterSpacing: 5px;
+    `};
+`
+
 const SectionBody = styled.p`
-    color: white;
     fontSize: 16px;
-    max-width: 600px;
+    color: ${props => props.theme.secondary};
+    fontWeight: book;
+    textAlign: left;
+
+    ${devices.tablet`
+    fontSize: 24px;
+    `};
 `;
 
 const Brick = styled.div`
@@ -46,4 +65,4 @@ const Brick = styled.div`
     background: ${props => props.theme.highlight};
 `;
 
-export { CenteredContainer, SectionHeader, SectionBody, Brick };
+export { CenteredContainer, SectionHeader, SectionSubheader, SectionBody, Brick };
