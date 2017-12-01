@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import { Container } from '../../components';
 import { SectionHeader } from './section_components.jsx';
 
+
 const Wrapper = styled.div`
-	background: ${props => props.theme.secondary}
 	padding: 80px 0;
 `;
 
@@ -18,29 +18,31 @@ const InfoHeader = styled.h2`
 `;
 
 const TextBox = styled.input`
-	width: 33%;
-	margin: auto;
 	display: block;
 	padding: 10px;
+	margin-right: 5px;
+	width: 33%;
 	font-size: 18px;
-	background: ${props => props.theme.secondary}
-	border-color: #ffffff;
+	border-color: ${props => props.theme.secondary};
 	border-style: solid;
-	border-radius: 50px;
+	color: ${props => props.theme.secondary};
+`;
+
+const SignUpButton = styled.input`
+	display: block;
+	padding: 10px;
+	margin-left: 5px;
+	width: 10%;
+	border: none;
+	font-size: 18px;
+	background: ${props => props.theme.secondary};
 	text-align: center;
 	color: #ffffff;
 `;
 
-const SignUpButton = styled.input`
-	width: 10%;
-	margin: auto;
-	display: block;
-	background: ${props => props.theme.secondary}
-	border-color: #ffffff;
-	border-style: solid;
-	border-radius: 50px;
-	text-align: center;
-	color: #ffffff;
+const FormContainer = styled.div`
+	display: flex;
+	justify-content: center;
 `;
 
 class EmailList extends React.Component {
@@ -70,14 +72,16 @@ class EmailList extends React.Component {
 					<SectionHeader>Sign Up!</SectionHeader>
 					<InfoHeader>Join our email list to receive weekly emails detailing upcoming events, tech talks, hackathons, and the latest Hacker news!</InfoHeader>
 					<form onSubmit={this.testFunction}>
-						<TextBox 
-							type="email" 
-							name="email" 
-							id="signUpEmail" 
-							placeholder="YOUR EMAIL"
-							value={this.state.emailText}
-							onChange={this.emailTextChange}/><br></br>
-						<SignUpButton type="submit" name="signup" value="SUBMIT" /><br></br>
+						<FormContainer>
+							<TextBox 
+								type="email" 
+								name="email" 
+								id="signUpEmail" 
+								placeholder="YOUR EMAIL"
+								value={this.state.emailText}
+								onChange={this.emailTextChange}/>
+							<SignUpButton type="submit" name="signup" value="SIGN UP" />
+						</FormContainer>
 					</form>
 				</Container>
 			</Wrapper>
