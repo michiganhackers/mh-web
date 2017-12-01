@@ -6,6 +6,7 @@ import Landing from './landing.jsx';
 import Faq from './faq.jsx';
 import Welcome from './welcome.jsx';
 import Sponsorship from './sponsorship.jsx';
+import ComingUp from './coming_up.jsx';
 
 // Add overflow: hidden to container to prevent floating squares from escaping container
 const StyledPageContainer = styled(PageContainer)`overflow: hidden;`;
@@ -18,6 +19,7 @@ class HomePage extends React.Component {
                 <Landing />
                 <Welcome />
                 <Faq />
+                <ComingUp />
                 <Sponsorship />
             </StyledPageContainer>
         );
