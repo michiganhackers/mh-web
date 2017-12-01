@@ -46,7 +46,7 @@ const SectionSubheader = styled.h3`
     fontSize: 36px;
     letterSpacing: 5px;
     `};
-`
+`;
 
 const SectionBody = styled.p`
     fontSize: 16px;
@@ -65,4 +65,10 @@ const Brick = styled.div`
     background: ${props => props.theme.highlight};
 `;
 
-export { CenteredContainer, SectionHeader, SectionSubheader, SectionBody, Brick };
+export {
+    CenteredContainer,
+    SectionHeader,
+    SectionSubheader,
+    SectionBody,
+    Brick
+};

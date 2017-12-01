@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SectionHeader, SectionSubheader, SectionBody } from './section_components.jsx'
+import {
+    SectionHeader,
+    SectionSubheader,
+    SectionBody
+} from './section_components.jsx';
 import { connect } from 'react-redux';
 const Logo = require('../../../static/icons/logo-title.png');
 import { devices } from '../../styles';
@@ -21,7 +25,6 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 
     ${devices.tablet`
         width: calc(100% - 100px);
@@ -49,8 +52,12 @@ class Landing extends React.Component {
                 <Container>
                     <LogoImage src={Logo} />
                     <SectionHeader>Michigan Hackers Header</SectionHeader>
-                    <SectionSubheader>Michigan Hackers Subheader text</SectionSubheader>
-                    <SectionBody>Michigan Hackers body text will be here</SectionBody>
+                    <SectionSubheader>
+                        Michigan Hackers Subheader text
+                    </SectionSubheader>
+                    <SectionBody>
+                        Michigan Hackers body text will be here
+                    </SectionBody>
                 </Container>
             </Wrapper>
         );
