@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { PageContainer } from '../../components';
 
 import Landing from './landing.jsx';
+import Calendar from './calendar.jsx';
 import Faq from './faq.jsx';
 import EmailList from './email_list.jsx';
 import Welcome from './welcome.jsx';
@@ -17,6 +18,7 @@ class HomePage extends React.Component {
         return (
             <StyledPageContainer ref="pagecontainer">
                 <Landing />
+                <Calendar />
                 <Welcome />
                 <Faq />
                 <Sponsorship />
