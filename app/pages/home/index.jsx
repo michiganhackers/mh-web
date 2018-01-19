@@ -4,6 +4,7 @@ import { PageContainer } from '../../components';
 
 import Landing from './landing.jsx';
 import Faq from './faq.jsx';
+import EmailList from './email_list.jsx';
 import Welcome from './welcome.jsx';
 import Sponsorship from './sponsorship.jsx';
 import ComingUp from './coming_up.jsx';
@@ -21,6 +22,7 @@ class HomePage extends React.Component {
                 <Faq />
                 <ComingUp />
                 <Sponsorship />
+                <EmailList />
             </StyledPageContainer>
         );
     }
