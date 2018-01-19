@@ -11,7 +11,6 @@ const Wrapper = styled.div`
     border: solid;
     border-color: ${props => props.theme.secondary};
     border-width: medium;
-    height: 350px;
     width: 100%;
     margin: 10px;
     text-align: left;
@@ -26,6 +25,11 @@ const Wrapper = styled.div`
 
 const StyledSectionBody = styled(SectionBody)`
     color: ${props => props.theme.secondary};
+`;
+
+const StyledSectionDate = styled(SectionBody)`
+    color: black;
+    text-align: right;
 `;
 
 const StyledSectionHeader = styled(SectionHeader)`
@@ -43,7 +47,7 @@ class EventContainer extends React.Component {
     render() {
         return (
             <Wrapper>
-                <StyledSectionBody>{this.props.date}</StyledSectionBody>
+                <StyledSectionDate>{this.props.date}</StyledSectionDate>
                 <StyledSectionBody>{this.props.eventBody}</StyledSectionBody>
                 <StyledSectionHeader>
                     {this.props.eventName}
