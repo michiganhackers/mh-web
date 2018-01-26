@@ -24,7 +24,7 @@ const CenteredContainer = styled.div`
 const SectionHeader = styled.h2`
     fontSize: 48px;
     letterSpacing: 5px;
-    color: ${props => (props.dark ? 'white': props.theme.secondary)};
+    color: ${props => (props.dark ? 'white' : props.theme.secondary)};
     textTransform: uppercase;
     fontWeight: bold;
     textAlign: left;
@@ -38,7 +38,7 @@ const SectionHeader = styled.h2`
 const SectionSubheader = styled.h3`
     fontSize: 24px;
     letterSpacing: 2px;
-    color: ${props => (props.dark ? 'white': props.theme.secondary)};
+    color: ${props => (props.dark ? 'white' : props.theme.secondary)};
     fontWeight: book;
     textAlign: left;
 
@@ -50,7 +50,7 @@ const SectionSubheader = styled.h3`
 
 const SectionBody = styled.p`
     fontSize: 16px;
-    color: ${props => (props.dark ? 'white': props.theme.secondary)};
+    color: ${props => (props.dark ? 'white' : props.theme.secondary)};
     fontWeight: book;
     textAlign: left;
 
