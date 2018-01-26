@@ -35,7 +35,7 @@ export function teamsState(state = initialState, action) {
                     ...state.data,
                     teams: action.data
                 },
-                message: action.message
+                message: action.message 
             };
 
         case actions.JOIN_TEAM_REQUEST:

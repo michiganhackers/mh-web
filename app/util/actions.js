@@ -77,6 +77,20 @@ export function getResponseFromRoute(route) {
     });
 }
 
+export function simpleGetRequest(route) {
+    //var headers = new Headers();
+    //headers.append('Access-Control-Allow-Origin', '*')
+        // 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+        // 'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
+    // };
+    console.log('hahahahaha', route)
+
+    return fetch(route, {
+        //method: 'get',
+        //headers: headers
+    });
+}
+
 export function loadFormRequest(token, formRoute) {
     return getResponseFromRoute(endpoints.FORM + formRoute, token);
 }

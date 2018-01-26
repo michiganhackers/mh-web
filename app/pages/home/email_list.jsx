@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { Container } from '../../components';
 import { SectionHeader } from './section_components.jsx';
+import { EmailListThunks } from '../../actions';
 
 const Wrapper = styled.div`padding: 80px 0;`;
 
@@ -48,13 +49,22 @@ class EmailList extends React.Component {
         this.state = {
             emailText: ''
         };
-        this.testFunction = this.testFunction.bind(this);
+        this.addToEmailList = this.addToEmailList.bind(this);
         this.emailTextChange = this.emailTextChange.bind(this);
     }
 
-    testFunction(e) {
+    // Make this function add an email to our MailJet email list.
+    // Going to take the form of the function joinTeam() below
+    addToEmailList(e) {
         e.preventDefault();
-        alert(this.state.emailText);
+
+        const data = {
+            // "Email" is the only mandatory field required by MailJet. Does it need to be capitalized? 
+            email: this.state.emailText
+        };
+        this.props.dispatch(EmailListThunks.addToEmailList(data));
+
+        alert('Check MailJet to see if this email was added: ' + this.state.emailText);
     }
 
     emailTextChange(e) {
@@ -71,7 +81,7 @@ class EmailList extends React.Component {
                         upcoming events, tech talks, hackathons, and the latest
                         Hacker news!
                     </InfoHeader>
-                    <form onSubmit={this.testFunction}>
+                    <form onSubmit={this.addToEmailList}>
                         <FormContainer>
                             <TextBox
                                 type="email"
