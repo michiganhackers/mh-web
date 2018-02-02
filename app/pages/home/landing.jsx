@@ -1,16 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-    SectionHeader,
-    SectionSubheader,
-    SectionBody
-} from './section_components.jsx';
+import { SectionHeader } from './section_components.jsx';
 import { connect } from 'react-redux';
 const Logo = require('../../../static/icons/logo-title.png');
 import { devices } from '../../styles';
 
 const Wrapper = styled.div`
-    background: ${props => props.theme.primary};
+    background: ${props => props.theme.secondary};
     padding: 0;
     height: calc(100vh - 80px);
     zIndex: 98;
@@ -23,6 +19,7 @@ const Container = styled.div`
     margin: 0 auto;
 
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
 
@@ -51,13 +48,7 @@ class Landing extends React.Component {
             <Wrapper>
                 <Container>
                     <LogoImage src={Logo} />
-                    <SectionHeader>Michigan Hackers Header</SectionHeader>
-                    <SectionSubheader>
-                        Michigan Hackers Subheader text
-                    </SectionSubheader>
-                    <SectionBody>
-                        Michigan Hackers body text will be here
-                    </SectionBody>
+                    <SectionHeader dark>Michigan Hackers</SectionHeader>
                 </Container>
             </Wrapper>
         );

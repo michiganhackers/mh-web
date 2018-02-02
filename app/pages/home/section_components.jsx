@@ -27,7 +27,7 @@ const SectionHeader = styled.h2`
     color: ${props => (props.dark ? 'white' : props.theme.secondary)};
     textTransform: uppercase;
     fontWeight: bold;
-    textAlign: left;
+    textAlign: center;
 
     ${devices.tablet`
     fontSize: 72px;

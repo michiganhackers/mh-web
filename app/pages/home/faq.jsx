@@ -62,7 +62,7 @@ class Faq extends React.Component {
         return (
             <Wrapper>
                 <Container>
-                    <SectionHeader>FAQ</SectionHeader>
+                    <SectionHeader dark>FAQ</SectionHeader>
                     <FlexBox>
                         <FaqColumn>
                             <FaqBody>
