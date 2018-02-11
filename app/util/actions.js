@@ -78,16 +78,19 @@ export function getResponseFromRoute(route) {
 }
 
 export function simpleGetRequest(route) {
-    //var headers = new Headers();
-    //headers.append('Access-Control-Allow-Origin', '*')
-        // 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
-        // 'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
-    // };
+    const headers = {
+        'Content-Type': 'application/json'
+        // 'Access-Control-Allow-Origin': 'http://692cd87c.ngrok.io/',
+        // 'Access-Control-Allow-Methods': 'GET, POST, PUT, OPTIONS',
+        // 'Access-Control-Allow-Headers': 'Content-Type'
+    }
+    
     console.log('hahahahaha', route)
 
     return fetch(route, {
-        //method: 'get',
-        //headers: headers
+        method: 'get',
+        // mode: 'no-cors',
+        headers: new Headers(headers)
     });
 }
 

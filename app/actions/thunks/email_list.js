@@ -11,6 +11,7 @@ export default class EmailListThunks {
             // Ask - mainly the TeamsRequests and "type"
             return EmailListRequests.addToEmailList().then(response => {
                 if (response.status == 200) {
+                    console.log('RESPONSE STATUS IS: ' + response.status)
                     response.json().then(json => {
                         dispatch({
                             type: actions.JOIN_EMAIL_LIST_SUCCESS,
@@ -19,10 +20,11 @@ export default class EmailListThunks {
                         });
                     });
                 } else {
+                    console.log('RESPONSE STATUS IS: ' + response.status)
                     response.json().then(json => {
                         dispatch({
                             type: actions.JOIN_EMAIL_LIST_FAILURE,
-                            error: response.status,
+                            data: data,
                             message: json.message
                         });
                     });
