@@ -2,16 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { Container } from '../../components';
-import { SectionHeader } from './section_components.jsx';
+import {
+    SectionHeader,
+    SectionBody
+} from './section_components.jsx';
 
-const Wrapper = styled.div`padding: 80px 0;`;
-
-const InfoHeader = styled.h2`
-    fontSize: 30px;
-    color: ${props => props.theme.highlight};
+const StyledSectionBody = styled(SectionBody)`
     text-align: center;
-    fontWeight: 300;
-    textAlign: center;
+`;
+
+const Wrapper = styled.div`
+    padding: 80px 0;
+    background: ${props => props.theme.secondary};
 `;
 
 const TextBox = styled.input`
@@ -20,7 +22,7 @@ const TextBox = styled.input`
     margin-right: 5px;
     width: 33%;
     font-size: 18px;
-    border-color: ${props => props.theme.secondary};
+    border-color: ${props => props.theme.primary};
     border-style: solid;
     color: ${props => props.theme.secondary};
 `;
@@ -32,9 +34,9 @@ const SignUpButton = styled.input`
     width: 10%;
     border: none;
     font-size: 18px;
-    background: ${props => props.theme.secondary};
+    background: ${props => props.theme.primary};
     text-align: center;
-    color: #ffffff;
+    color: ${props => props.theme.secondary};
 `;
 
 const FormContainer = styled.div`
@@ -65,12 +67,12 @@ class EmailList extends React.Component {
         return (
             <Wrapper>
                 <Container>
-                    <SectionHeader>Sign Up!</SectionHeader>
-                    <InfoHeader>
+                    <SectionHeader dark>Sign Up!</SectionHeader>
+                    <StyledSectionBody dark>
                         Join our email list to receive weekly emails detailing
                         upcoming events, tech talks, hackathons, and the latest
                         Hacker news!
-                    </InfoHeader>
+                    </StyledSectionBody>
                     <form onSubmit={this.testFunction}>
                         <FormContainer>
                             <TextBox

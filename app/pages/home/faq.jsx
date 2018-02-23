@@ -6,7 +6,7 @@ import { SectionHeader } from './section_components.jsx';
 import { devices } from '../../styles';
 
 const Wrapper = styled.div`
-    background: ${props => props.theme.secondary}
+    background: ${props => props.theme.secondary};
     padding: 80px 0;
 `;
 

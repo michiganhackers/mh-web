@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import {
     CenteredContainer,
     SectionHeader,
-    SectionBody,
     Brick
 } from './section_components.jsx';
 
@@ -20,9 +19,9 @@ class Welcome extends React.Component {
                 <CenteredContainer>
                     <Brick />
                     <SectionHeader>
-                        Welcome to<br /> Michigan Hackers
+                        Build. Break. Repeat.
                     </SectionHeader>
-                    <SectionBody>Get learnt and turnt</SectionBody>
+                    <Brick />
                 </CenteredContainer>
             </Wrapper>
         );
