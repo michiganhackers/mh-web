@@ -170,6 +170,9 @@ class HeaderLinks extends React.Component {
                 <StyledALink href={routes.HOME + '#sponsors'} color={color}>
                     Sponsors
                 </StyledALink>
+                <StyledNavLink to={routes.KNOWLEDGE_BASE} color={color}>
+                    Knowledge Base
+                </StyledNavLink>
                 {isLoggedIn && isAdmin ? (
                     <StyledALink href={routes.ADMIN} color={color}>
                         Admin

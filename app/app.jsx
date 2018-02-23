@@ -26,7 +26,8 @@ import {
     SpeakerApply,
     Dashboard,
     AdminPage,
-    TeamBuilding
+    TeamBuilding,
+    KnowledgeBase
 } from './pages';
 import { ConfigurationThunks } from './actions';
 import { connect } from 'react-redux';
@@ -85,6 +86,11 @@ class AppProvider extends React.Component {
                                 exact
                                 path={routes.HOME}
                                 component={HomePage}
+                            />
+                            <Route
+                                exact
+                                path={routes.KNOWLEDGE_BASE}
+                                component={KnowledgeBase}
                             />
                             <Route
                                 exact
