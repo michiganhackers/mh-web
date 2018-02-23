@@ -18,9 +18,7 @@ class Welcome extends React.Component {
             <Wrapper>
                 <CenteredContainer>
                     <Brick />
-                    <SectionHeader>
-                        Build. Break. Repeat.
-                    </SectionHeader>
+                    <SectionHeader>Build. Break. Repeat.</SectionHeader>
                     <Brick />
                 </CenteredContainer>
             </Wrapper>

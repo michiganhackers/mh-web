@@ -2,14 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { Container } from '../../components';
-import {
-    SectionHeader,
-    SectionBody
-} from './section_components.jsx';
+import { SectionHeader, SectionBody } from './section_components.jsx';
 
-const StyledSectionBody = styled(SectionBody)`
-    text-align: center;
-`;
+const StyledSectionBody = styled(SectionBody)`text-align: center;`;
 
 const Wrapper = styled.div`
     padding: 80px 0;
