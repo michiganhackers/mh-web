@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { SectionHeader } from './section_components.jsx';
 import { connect } from 'react-redux';
 const Logo = require('../../../static/icons/logo-title.png');
 import { devices } from '../../styles';
@@ -18,8 +19,8 @@ const Container = styled.div`
     margin: 0 auto;
 
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
 
     ${devices.tablet`
@@ -41,27 +42,13 @@ const LogoImage = styled.img`
     z-index: 99;
 `;
 
-const Text = styled.h2`
-    fontSize: 50px;
-    color: white;
-    text-align: center;
-    fontWeight: 500;
-    textAlign: center;
-    padding: 0 10vw;
-    margin: 5px 0;
-
-    ${devices.tablet`
-        fontSize: 50px;
-    `};
-`;
-
 class Landing extends React.Component {
     render() {
         return (
             <Wrapper>
                 <Container>
                     <LogoImage src={Logo} />
-                    <Text>Michigan Hackers</Text>
+                    <SectionHeader dark>Michigan Hackers</SectionHeader>
                 </Container>
             </Wrapper>
         );
