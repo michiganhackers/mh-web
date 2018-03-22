@@ -3,12 +3,10 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 
 import BigCalendar from 'react-big-calendar';
-import request from 'superagent'
+import request from 'superagent';
+import config from '../../../config/default.js';
 
-
-const CALENDAR_ID = 'tb8ckdrm61bdsj6jfm7khob4u5@group.calendar.google.com'
-const API_KEY = 'AIzaSyAOuDzSlG24RPBn3OKVAyjW3OK_EJhCUbp'
-let url = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`
+let url = `https://www.googleapis.com/calendar/v3/calendars/${config.calendar_id}/events?key=${config.google_calendar_api_key}`
 
 function getEvents(callback) {
   request
