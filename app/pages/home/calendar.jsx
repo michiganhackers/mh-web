@@ -4,9 +4,10 @@ import { connect } from 'react-redux';
 
 import BigCalendar from 'react-big-calendar';
 import request from 'superagent';
-import config from '../../../config/default.js';
 
-let baseUrl = `https://www.googleapis.com/calendar/v3/calendars/${config.calendar_id}/events?key=${config.google_calendar_api_key}`
+const CALENDAR_ID = '8n8u58ssric1hmm84jvkvl9d68@group.calendar.google.com'
+const API_KEY = 'AIzaSyD-UNSznwGRDtLZqizxTM1ku-9YS0DZkcQ'
+var baseUrl = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`
 var pageUrl = baseUrl;
 var nextPageToken = '';
 

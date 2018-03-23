@@ -3,8 +3,6 @@ module.exports = {
     app_name: process.env.APP_NAME || 'Michigan Hackers',
     start_date: new Date(process.env.START_DATE || '9-22-17'),
     end_date: new Date(process.env.END_DATE || '9-24-17'),
-    calendar_id: process.env.CALENDAR_ID || '',
-    google_calendar_api_key: process.env.GOOGLE_CALENDAR_APIKEY || '',
     is_live_page_enabled: parseBool(process.env.IS_LIVE_PAGE_ENABLED, false),
     is_application_open: parseBool(process.env.IS_APPLICATION_OPEN, true),
     env: process.env.NODE_ENV || 'development',
