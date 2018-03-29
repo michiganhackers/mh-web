@@ -10,6 +10,7 @@ const API_KEY = 'AIzaSyD-UNSznwGRDtLZqizxTM1ku-9YS0DZkcQ'
 var baseUrl = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`
 var pageUrl = baseUrl;
 var nextPageToken = '';
+var events = [];
 
 let allViews = Object.keys(BigCalendar.Views).map(k => BigCalendar.Views[k]);
 
@@ -21,14 +22,6 @@ const Wrapper = styled.div`
 `;
 
 class Calendar extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            events: []
-        };
-        this.getEvents = this.getEvents.bind(this);
-    }
-
     getEvents() {
         request
             .get(pageUrl)
@@ -42,7 +35,7 @@ class Calendar extends React.Component {
                             var end = event.end.date || event.end.dateTime;
                             var title = event.summary;
                             if (start && end && title){
-                                this.state.events.push({
+                                events.push({
                                     start: new Date(start),
                                     end: new Date(end),
                                     title: title,
@@ -50,12 +43,21 @@ class Calendar extends React.Component {
                             }
                         }
                     })
+                    this.setState({events: events})
                     if (nextPageToken != ''){
                         pageUrl = baseUrl + '&pageToken=' + nextPageToken;
                         this.getEvents();
                     }
                 }
             })
+    }
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            events: []
+        };
+        this.getEvents = this.getEvents.bind(this);
     }
 
     componentDidMount() {
