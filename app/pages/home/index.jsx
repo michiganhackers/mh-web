@@ -4,10 +4,8 @@ import { PageContainer } from '../../components';
 
 import Landing from './landing.jsx';
 import Calendar from './calendar.jsx';
-import Faq from './faq.jsx';
 import EmailList from './email_list.jsx';
 import Welcome from './welcome.jsx';
-import Sponsorship from './sponsorship.jsx';
 
 // Add overflow: hidden to container to prevent floating squares from escaping container
 const StyledPageContainer = styled(PageContainer)`overflow: hidden;`;
@@ -18,11 +16,9 @@ class HomePage extends React.Component {
         return (
             <StyledPageContainer ref="pagecontainer">
                 <Landing />
-                <Calendar />
                 <Welcome />
-                <Faq />
-                <Sponsorship />
                 <EmailList />
+                <Calendar />
             </StyledPageContainer>
         );
     }

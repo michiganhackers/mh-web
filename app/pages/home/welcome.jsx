@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 class Welcome extends React.Component {
     render() {
         return (
-            <Wrapper>
+            <Wrapper id="about">
                 <CenteredContainer>
                     <Brick />
                     <SectionHeader>

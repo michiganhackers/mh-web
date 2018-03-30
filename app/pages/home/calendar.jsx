@@ -5,9 +5,9 @@ import { connect } from 'react-redux';
 import BigCalendar from 'react-big-calendar';
 import request from 'superagent';
 
-const CALENDAR_ID = '8n8u58ssric1hmm84jvkvl9d68@group.calendar.google.com'
-const API_KEY = 'AIzaSyD-UNSznwGRDtLZqizxTM1ku-9YS0DZkcQ'
-var baseUrl = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`
+const CALENDAR_ID = '8n8u58ssric1hmm84jvkvl9d68@group.calendar.google.com';
+const API_KEY = 'AIzaSyD-UNSznwGRDtLZqizxTM1ku-9YS0DZkcQ';
+var baseUrl = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`;
 var pageUrl = baseUrl;
 var nextPageToken = '';
 var events = [];
@@ -23,33 +23,31 @@ const Wrapper = styled.div`
 
 class Calendar extends React.Component {
     getEvents() {
-        request
-            .get(pageUrl)
-            .end((err, resp) => {
-                if (!err) {
-                    var body = JSON.parse(resp.text);
-                    nextPageToken = body.nextPageToken || '';
-                    body.items.map((event) => {
-                        if (event.status != 'cancelled'){
-                            var start = event.start.date || event.start.dateTime;
-                            var end = event.end.date || event.end.dateTime;
-                            var title = event.summary;
-                            if (start && end && title){
-                                events.push({
-                                    start: new Date(start),
-                                    end: new Date(end),
-                                    title: title,
-                                })
-                            }
+        request.get(pageUrl).end((err, resp) => {
+            if (!err) {
+                var body = JSON.parse(resp.text);
+                nextPageToken = body.nextPageToken || '';
+                body.items.map(event => {
+                    if (event.status != 'cancelled') {
+                        var start = event.start.date || event.start.dateTime;
+                        var end = event.end.date || event.end.dateTime;
+                        var title = event.summary;
+                        if (start && end && title) {
+                            events.push({
+                                start: new Date(start),
+                                end: new Date(end),
+                                title: title
+                            });
                         }
-                    })
-                    this.setState({events: events})
-                    if (nextPageToken != ''){
-                        pageUrl = baseUrl + '&pageToken=' + nextPageToken;
-                        this.getEvents();
                     }
+                });
+                this.setState({ events: events });
+                if (nextPageToken != '') {
+                    pageUrl = baseUrl + '&pageToken=' + nextPageToken;
+                    this.getEvents();
                 }
-            })
+            }
+        });
     }
 
     constructor(props) {
@@ -66,7 +64,7 @@ class Calendar extends React.Component {
 
     render() {
         return (
-            <Wrapper>
+            <Wrapper id="calendar">
                 <BigCalendar
                     selectable
                     events={this.state.events}
