@@ -2,17 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { Container } from '../../components';
-import { SectionHeader } from './section_components.jsx';
 import { EmailListThunks } from '../../actions';
+import { SectionHeader, SectionBody } from './section_components.jsx';
 
-const Wrapper = styled.div`padding: 80px 0;`;
+const Wrapper = styled.div`
+    background: ${props => props.theme.secondary};
+    padding: 80px 0;
+`;
 
-const InfoHeader = styled.h2`
-    fontSize: 30px;
+const StyledSectionBody = styled(SectionBody)`
     color: ${props => props.theme.highlight};
     text-align: center;
-    fontWeight: 300;
-    textAlign: center;
 `;
 
 const TextBox = styled.input`
@@ -21,7 +21,7 @@ const TextBox = styled.input`
     margin-right: 5px;
     width: 33%;
     font-size: 18px;
-    border-color: ${props => props.theme.secondary};
+    border-color: ${props => props.theme.highlight};
     border-style: solid;
     color: ${props => props.theme.secondary};
 `;
@@ -31,7 +31,7 @@ const SignUpButton = styled.input`
     padding: 10px;
     margin-left: 5px;
     width: 10%;
-    border: none;
+    border-color: ${props => props.theme.highlight};
     font-size: 18px;
     background: ${props => props.theme.secondary};
     text-align: center;
@@ -41,6 +41,7 @@ const SignUpButton = styled.input`
 const FormContainer = styled.div`
     display: flex;
     justify-content: center;
+    padding: 20px;
 `;
 
 class EmailList extends React.Component {
@@ -73,14 +74,14 @@ class EmailList extends React.Component {
 
     render() {
         return (
-            <Wrapper>
+            <Wrapper id="email-list">
                 <Container>
-                    <SectionHeader>Sign Up!</SectionHeader>
-                    <InfoHeader>
+                    <SectionHeader dark>Sign Up!</SectionHeader>
+                    <StyledSectionBody>
                         Join our email list to receive weekly emails detailing
                         upcoming events, tech talks, hackathons, and the latest
                         Hacker news!
-                    </InfoHeader>
+                    </StyledSectionBody>
                     <form onSubmit={this.addToEmailList}>
                         <FormContainer>
                             <TextBox

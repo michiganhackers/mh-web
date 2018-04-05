@@ -66,20 +66,6 @@ const HeaderNavLink = styled(NavLink)`
     marginLeft: 0;
 `;
 
-const StyledNavLink = styled(NavLink)`
-    fontSize: 22px;
-    padding: 2px 20px;
-    //margin: 10px 0 10px 15px;
-    color: ${props => props.color};
-    textDecoration: none;
-    transition: all 0.3s;
-    text-transform: uppercase;
-
-    &:hover {
-        textDecoration: underline;
-    }
-`;
-
 const StyledALink = styled.a`
     fontSize: 22px;
     padding: 2px 20px;
@@ -150,8 +136,7 @@ const Burger = styled.div`
 
 class HeaderLinks extends React.Component {
     render() {
-        const { color, userMetadata, isCompact } = this.props;
-        const { isLoggedIn, isAdmin, isSponsor } = userMetadata;
+        const { color, isCompact } = this.props;
 
         // Either render a Menu component for mobile, or NavContainer for desktop as
         // the parent component for the navigation links.
@@ -164,31 +149,9 @@ class HeaderLinks extends React.Component {
                 <StyledALink href={routes.HOME + '#email-list'} color={color}>
                     Email List
                 </StyledALink>
-                <StyledALink href={routes.HOME + '#events'} color={color}>
-                    Events
+                <StyledALink href={routes.HOME + '#calendar'} color={color}>
+                    Calendar
                 </StyledALink>
-                <StyledALink href={routes.HOME + '#sponsors'} color={color}>
-                    Sponsors
-                </StyledALink>
-                {isLoggedIn && isAdmin ? (
-                    <StyledALink href={routes.ADMIN} color={color}>
-                        Admin
-                    </StyledALink>
-                ) : null}
-                {isLoggedIn && (isSponsor || isAdmin) ? (
-                    <StyledALink href={routes.SPONSOR_READER} color={color}>
-                        Sponsor
-                    </StyledALink>
-                ) : null}
-                {isLoggedIn ? (
-                    <StyledNavLink to={routes.LOGOUT} color={color}>
-                        Log Out
-                    </StyledNavLink>
-                ) : (
-                    <StyledNavLink to={routes.LOGIN} color={color}>
-                        Log In
-                    </StyledNavLink>
-                )}
             </WrappingComponent>
         );
     }

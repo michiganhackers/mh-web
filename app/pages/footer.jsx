@@ -111,13 +111,13 @@ class Footer extends React.Component {
                     <FooterWrapper id="asdfFooter">
                         <Container>
                             <HomeFooter>
-                                <Text>© MHacks 2017</Text>
+                                <Text>Michigan Hackers 2018</Text>
                                 <Flexer>
                                     <ImgButton
                                         src={FacebookImg}
                                         alt="Facebook"
                                         align="middle"
-                                        href="https://www.facebook.com/MHacksHackathon"
+                                        href="https://www.facebook.com/michiganhackers/"
                                     />
                                     <ImgButton
                                         src={InstagramImg}
@@ -133,11 +133,8 @@ class Footer extends React.Component {
                                     />
                                 </Flexer>
                                 <LegalLinks>
-                                    <LegalLink href="https://docs.google.com/document/d/1L9wC7lfXmOBCKdUQancuoYQf86KIQqUJ0is4dr8QqQM/pub">
-                                        MHacks CoC
-                                    </LegalLink>
-                                    <LegalLink href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">
-                                        MLH CoC
+                                    <LegalLink href="">
+                                        Michigan Hackers CoC
                                     </LegalLink>
                                 </LegalLinks>
                             </HomeFooter>
