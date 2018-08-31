@@ -22,6 +22,7 @@ const Wrapper = styled.div`
 `;
 
 class Calendar extends React.Component {
+    // TODO: refactor to axios
     getEvents() {
         request.get(pageUrl).end((err, resp) => {
             if (!err) {

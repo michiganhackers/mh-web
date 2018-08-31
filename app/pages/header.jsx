@@ -159,8 +159,6 @@ class HeaderLinks extends React.Component {
 
 class Header extends React.Component {
     render() {
-        const userData = this.props.userState.data;
-        const userMetadata = getUserMetadata(userData);
         const configurationData = this.props.configurationState.data;
 
         return (
@@ -182,7 +180,6 @@ class Header extends React.Component {
                                     <Logo src={HeaderLogoImage} />
                                 </HeaderNavLink>
                                 <HeaderLinks
-                                    userMetadata={userMetadata}
                                     configurationData={configurationData}
                                     color={this.props.theme.secondary}
                                     isCompact={false}
@@ -192,7 +189,6 @@ class Header extends React.Component {
                                     disableCompact={true}
                                 >
                                     <HeaderLinks
-                                        userMetadata={userMetadata}
                                         configurationData={configurationData}
                                         color={this.props.theme.highlight}
                                         isCompact={true}
