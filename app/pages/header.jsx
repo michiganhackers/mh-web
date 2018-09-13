@@ -7,7 +7,6 @@ import { slide as Menu } from 'react-burger-menu';
 import { routes } from '../constants';
 import { devices } from '../styles';
 import theme from '../styles/theme.js';
-import { getUserMetadata } from '../util/user.js';
 
 const HeaderLogoImage = require('../../static/icons/mh-logo.png');
 const Favicon = require('../../static/icons/logo-square.jpg');

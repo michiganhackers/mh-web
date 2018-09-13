@@ -1,7 +1,7 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
 import { render } from 'react-dom';
 
-import { Route, Switch, Redirect } from 'react-router';
+import { Route, Switch } from 'react-router';
 import { ConnectedRouter, routerMiddleware } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 
@@ -58,7 +58,7 @@ class AppProvider extends React.Component {
     }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps() {
     return { };
 }
 
